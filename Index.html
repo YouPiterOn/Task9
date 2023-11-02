@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="form-container">
+        <form id="registration-form">
+            <div class="formField">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="formField">
+                <label for="number">Some number:</label>
+                <input type="number" id="number" required>
+            </div>
+            <div class="formField">
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" required>
+            </div>
+            <div class="formField">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="formField">
+                <label for="gender">Gender:</label>
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="none">None</option>
+                </select>
+            <div class="formField">
+                <label>Create new password:</label>
+                <input type="password" id="passwordInput" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$"><br>
+                <label>Password must contain at least one uppercase letter, one lowercase letter, one number, and one special symbol(@$!%*?&#).</label>
+            </div>
+            <div class="formField">
+                <label>Repeat your password:</label>
+                <input type="password" id="repeatPasswordInput" required><br>
+                <label id="passwordMatch">Passwords must match.</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    <table id="users-table">
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Age</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody id="users-list">
+        </tbody>
+
+    <script src="Scripts/IndexScript.js"></script>
+</body>
+</html>
